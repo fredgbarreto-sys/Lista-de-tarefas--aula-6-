@@ -1,0 +1,124 @@
+/*Reset CSS*/
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #7b2ff7, #c084fc);
+}
+
+/*Container central*/
+.container {
+
+    /*Limita largura máxima para dar um efeito de "tipo card"*/
+    max-width: 500px;
+    margin: 50px auto 50px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/*Título*/
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/*Tabela*/
+table {
+
+    /*Ocupa toda a largura do container*/
+    width: 100%;
+
+    /*Remove o espaço entre bordas da tabela*/
+    border-collapse: collapse;
+    margin-bottom: 15px;
+    
+    /*Evita que algo saia das bordas*/
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+/*Cabeçalho*/
+th {
+    background: #7b2ff7;
+    color: white;
+    padding: 10px;
+}
+
+/*Linhas*/
+td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/*Efeito Zebra, seleciona todas as linhas pares*/
+tr:nth-child(even) {
+    background-color: #F0F0EC;
+}
+
+/*Inputs*/
+.inputs {
+
+    /*Ativa flexbox*/
+    display: flex;
+
+    /*Espaço entre os campos*/
+    gap: 15px;
+    /*Permite quebrar linhas no celular*/
+    flex-wrap: wrap;
+}
+
+input {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+/*Campo*/
+.campo {
+
+    /*Cada campo ocupa um espaço igual*/
+    flex: 1;
+
+    /*Evita que fique muito pequeno*/
+    min-width: 150px;
+
+    /*Ativa a flex dentro do campo*/
+    display: flex;
+
+    /*Organiza verticalmente*/
+    flex-direction: column;
+}
+
+/*Botão*/
+button {
+    margin-top: 10px;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: #7b2ff7;
+    color: white;
+    font-size: 16px;
+
+    /*Muda o cursor para a mãozinha, ao passar o cursor sobre o botão*/
+    cursor: pointer;
+
+    /*Faz o botão crescer com um movimento mais suave*/
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #5a1fd8;
+
+    /*Aumenta o tamanho do botão, ao passar o cursor sobre ele*/
+    transform: scale(1.03);
+}
+
+/*Resultado*/
+#resultado {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}

@@ -1,23 +1,82 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Tarefas</title>
+    <title>Calculadora de IMC</title>
+    <script src="calculadora.js"></script>
+    <link rel="stylesheet" href="estilos.css">
 </head>
-<body>
-    <header>
-        <h1>Lista de Tarefas</h1>
-        <nav>
-            <a href="home.html">Home</a>
-            <a href="sobre.html">Sobre</a>
-            <a href="servicos.html">Serviços</a>
-        </nav>
-    </header>
 
-    <ul>
-        <li>Tarefa 1</li>
-    </ul>
+<body>
+
+    <div class="container">
+
+        <!-- tabela -->
+        <h3>Tabela de IMC</h3>
+        <table border="7">
+
+            <!--utilizando "tr" para criar uma linha de tabela-->
+            <tr>
+
+                <!--utilizando "th" para os títulos das colunas-->
+                <th>IMC</th>
+                <th>Classificação</th>
+            </tr>
+            <tr>
+
+                <!--utilizando "td" para o conteúdo da linha da tabela-->
+                <td>Abaixo de 18,5</td>
+                <td>Abaixo do Peso</td>
+            </tr>
+            <tr>
+                <td>18,5 - 24,90</td>
+                <td>Peso Normal</td>
+            </tr>
+            <tr>
+                <td>25 - 29,9</td>
+                <td>Sobrepeso</td>
+            </tr>
+            <tr>
+                <td>30 - 34,9</td>
+                <td>Obesidade Grau I</td>
+            </tr>
+            <tr>
+                <td>35 - 39,9</td>
+                <td> Obesidade Grau II</td>
+            </tr>
+            <tr>
+                <td>40 ou Mais</td>
+                <td> Obesidade Grau III</td>
+            </tr>
+        </table>
+
+        <!--agrupa os campos-->
+        <div class="inputs">
+
+            <!--cada label + input vira um bloco separado-->
+            <div class="campo">
+                <!-- setando os quilogramas -->
+                <label for="quilogramas">Quilogramas(Kg)</label>
+                <input type="number" id="quilogramas">
+            </div>
+
+            <div class="campo">
+                <!-- setando os metros -->
+                <label for="metros">Metros(m)</label>
+                <input type="number" id="metros">
+            </div>
+
+        </div>
+
+        <!-- setando o resultado-->
+        <p id="resultado"></p>
+        <!--chama função no JavaScript-->
+        <button onclick="calcularImc()">Calcular IMC</button>
+
+    </div>
 
 </body>
+
 </html>
